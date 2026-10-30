@@ -535,13 +535,13 @@ if st.session_state.get("enviado", False):
       st.markdown("---")
 
 
-  # --- FUNCIÓN PARA GENERAR EL PDF CORREGIDA (ANCHO 180mm) ---
+  # --- FUNCIÓN PARA GENERAR EL PDF PERFECTAMENTE ALINEADO Y SIN CORTES ---
   def crear_pdf(d, roadmap_items):
     pdf = FPDF()
     pdf.add_page()
     pdf.set_auto_page_break(auto=True, margin=15)
     
-    # Título Principal (ancho 180 para dejar margen simétrico)
+    # Título Principal
     pdf.set_font("helvetica", "B", 15)
     pdf.cell(180, 10, "Gestion Pyme IA - Informe de Diagnostico 360", 0, 1, "C")
     
@@ -557,13 +557,22 @@ if st.session_state.get("enviado", False):
     pdf.ln(2)
 
     for item in roadmap_items:
+      # Título de la fase
       pdf.set_font("helvetica", "B", 10)
-      # Ancho 180 mm en lugar de 190 para evitar cortes a la derecha
       pdf.multi_cell(180, 6, f"[{item['fase_secuencial']}] {item['titulo']} (Impacto: {item['impacto']})")
       
+      # Descripción separada limpiamente
+      pdf.set_font("helvetica", "B", 9)
+      pdf.cell(180, 5, "Descripcion:", 0, 1, "L")
       pdf.set_font("helvetica", "", 9)
-      pdf.multi_cell(180, 5, f"Descripcion: {item['desc']}")
-      pdf.multi_cell(180, 5, f"Como resuelve tu problema: {item['solucion_a']}")
+      pdf.multi_cell(180, 5, item['desc'])
+      
+      # Cómo resuelve el problema separado limpiamente
+      pdf.set_font("helvetica", "B", 9)
+      pdf.cell(180, 5, "Como resuelve tu problema:", 0, 1, "L")
+      pdf.set_font("helvetica", "", 9)
+      pdf.multi_cell(180, 5, item['solucion_a'])
+      
       pdf.ln(4)
 
     return bytes(pdf.output())
