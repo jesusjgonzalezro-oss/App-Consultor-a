@@ -535,7 +535,7 @@ if st.session_state.get("enviado", False):
       st.markdown("---")
 
 
-  # --- FUNCIÓN PARA GENERAR EL PDF PERFECTAMENTE ALINEADO A LA IZQUIERDA ---
+  # --- FUNCIÓN PARA GENERAR EL PDF CORREGIDA CON MULTI_CELL EN TODO ---
   def crear_pdf(d, roadmap_items):
     pdf = FPDF()
     pdf.add_page()
@@ -561,15 +561,15 @@ if st.session_state.get("enviado", False):
       pdf.set_font("helvetica", "B", 10)
       pdf.multi_cell(180, 6, f"[{item['fase_secuencial']}] {item['titulo']} (Impacto: {item['impacto']})")
       
-      # 2. Descripción alineada estrictamente a la izquierda sin saltos raros
+      # 2. Descripción usando multi_cell exclusivo (sin cortes)
       pdf.set_font("helvetica", "B", 9)
-      pdf.cell(180, 5, "Descripcion:", 0, 1, "L")
+      pdf.multi_cell(180, 5, "Descripcion:")
       pdf.set_font("helvetica", "", 9)
       pdf.multi_cell(180, 5, item['desc'])
       
-      # 3. Como resuelve alineado estrictamente a la izquierda
+      # 3. Como resuelve usando multi_cell exclusivo (sin cortes)
       pdf.set_font("helvetica", "B", 9)
-      pdf.cell(180, 5, "Como resuelve tu problema:", 0, 1, "L")
+      pdf.multi_cell(180, 5, "Como resuelve tu problema:")
       pdf.set_font("helvetica", "", 9)
       pdf.multi_cell(180, 5, item['solucion_a'])
       
