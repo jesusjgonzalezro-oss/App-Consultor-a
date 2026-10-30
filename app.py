@@ -535,7 +535,7 @@ if st.session_state.get("enviado", False):
       st.markdown("---")
 
 
-  # --- FUNCIÓN PARA GENERAR EL PDF CORREGIDA ---
+  # --- FUNCIÓN PARA GENERAR EL PDF CORREGIDA (fpdf2) ---
   def crear_pdf(d, roadmap_items):
     pdf = FPDF()
     pdf.add_page()
@@ -565,7 +565,7 @@ if st.session_state.get("enviado", False):
       pdf.multi_cell(190, 5, f"Como resuelve tu problema: {item['solucion_a']}")
       pdf.ln(4)
 
-    return pdf.output(dest="S").encode("latin1")
+    return bytes(pdf.output())
 
 
   pdf_bytes = crear_pdf(d, roadmap)
