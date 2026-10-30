@@ -295,15 +295,15 @@ if st.session_state.get("enviado", False):
     )
     roadmap.append({
         "categoria": "Control Financiero",
-        "titulo": "Cuadro de Mando Estandarizado de Márgenes y Tesorería",
+        "titulo": "Cuadro de Mando Estandarizado de Margenes y Tesoreria",
         "desc": (
-            "Implementación de un panel automatizado para controlar ingresos,"
+            "Implementacion de un panel automatizado para controlar ingresos,"
             " costes y evitar desviaciones de caja de forma sencilla."
         ),
-        "impacto": "Crítico",
+        "impacto": "Critico",
         "solucion_a": (
             "Aborda directamente la falta de control financiero y la"
-            " incertidumbre sobre los márgenes reales de cada servicio."
+            " incertidumbre sobre los margenes reales de cada servicio."
         ),
     })
 
@@ -317,10 +317,10 @@ if st.session_state.get("enviado", False):
         " de tiempo en gestiones."
     )
     roadmap.append({
-        "categoria": "Optimización Operativa",
-        "titulo": "Sistema Estándar de Control de Stock y Procesos",
+        "categoria": "Optimizacion Operativa",
+        "titulo": "Sistema Estandar de Control de Stock y Procesos",
         "desc": (
-            "Modularización de flujos internos para eliminar tiempos muertos y"
+            "Modularizacion de flujos internos para eliminar tiempos muertos y"
             " optimizar la cadena de valor de tu actividad."
         ),
         "impacto": "Alto",
@@ -340,8 +340,8 @@ if st.session_state.get("enviado", False):
         " atracción comercial."
     )
     roadmap.append({
-        "categoria": "Sistema de Atracción de Clientes",
-        "titulo": "Kit Comercial de Captación y Presencia Digital Local",
+        "categoria": "Sistema de Atraccion de Clientes",
+        "titulo": "Kit Comercial de Captacion y Presencia Digital Local",
         "desc": (
             "Despliegue de sistemas estandarizados para atraer clientes"
             " cualificados de forma constante y estructurada."
@@ -363,15 +363,15 @@ if st.session_state.get("enviado", False):
         " operativo."
     )
     roadmap.append({
-        "categoria": "Colaboración y Productividad Interna",
+        "categoria": "Colaboracion y Productividad Interna",
         "titulo": "Plataforma Centralizada de Productividad de Equipos",
         "desc": (
-            "Estructuración de canales de comunicación corporativa y tableros"
+            "Estructuracion de canales de comunicacion corporativa y tableros"
             " de tareas compartidas."
         ),
         "impacto": "Medio",
         "solucion_a": (
-            "Ordena la comunicación interna y el seguimiento de tareas,"
+            "Ordena la comunicacion interna y el seguimiento de tareas,"
             " sustituyendo los canales informales y caóticos."
         ),
     })
@@ -387,11 +387,11 @@ if st.session_state.get("enviado", False):
         " en tareas manuales y rutinarias."
     )
     roadmap.append({
-        "categoria": "Automatización Inteligente",
+        "categoria": "Automatizacion Inteligente",
         "titulo": "Asistente de IA para Tareas Administrativas y Respuestas",
         "desc": (
-            "Integración de aplicaciones prácticas de IA para redacción"
-            " automática, atención al cliente y agilidad operativa."
+            "Integracion de aplicaciones practicas de IA para redaccion"
+            " automatica, atencion al cliente y agilidad operativa."
         ),
         "impacto": "Alto",
         "solucion_a": (
@@ -421,15 +421,15 @@ if st.session_state.get("enviado", False):
         ]
     ):
       roadmap.append({
-          "categoria": "Gestión de Cobros",
-          "titulo": "Módulo Automatizado de Control de Facturación y Cobros",
+          "categoria": "Gestion de Cobros",
+          "titulo": "Modulo Automatizado de Control de Facturacion y Cobros",
           "desc": (
-              "Solución modular para agilizar la emisión de documentos de pago"
-              " y recordatorios automatizados de tesorería."
+              "Solucion modular para agilizar la emision de documentos de pago"
+              " y recordatorios automatizados de tesoreria."
           ),
-          "impacto": "Crítico",
+          "impacto": "Critico",
           "solucion_a": (
-              "Ataca directamente tu problema específico de cobros y liquidez"
+              "Ataca directamente tu problema especifico de cobros y liquidez"
               " reportado en el briefing."
           ),
       })
@@ -439,14 +439,14 @@ if st.session_state.get("enviado", False):
     ):
       roadmap.append({
           "categoria": "Canal Digital",
-          "titulo": "Pasarela de Integración Comercial y Canal Digital",
+          "titulo": "Pasarela de Integracion Comercial y Canal Digital",
           "desc": (
-              "Conexión estandarizada de tus sistemas comerciales físicos con"
+              "Conexion estandarizada de tus sistemas comerciales físicos con"
               " canales de venta online para centralizar pedidos."
           ),
           "impacto": "Alto",
           "solucion_a": (
-              "Resuelve tu desafío de integración digital y expansión de canales"
+              "Resuelve tu desafio de integracion digital y expansion de canales"
               " online mencionados."
           ),
       })
@@ -462,17 +462,17 @@ if st.session_state.get("enviado", False):
         ]
     ):
       roadmap.append({
-          "categoria": "Gestión del Talento",
+          "categoria": "Gestion del Talento",
           "titulo": (
-              "Protocolo Estandarizado de Inducción y Control de Productividad"
+              "Protocolo Estandarizado de Induccion y Control de Productividad"
           ),
           "desc": (
-              "Creación de manuales operativos y tableros de asignación de"
-              " tareas para acelerar la adaptación del equipo."
+              "Creacion de manuales operativos y tableros de asignacion de"
+              " tareas para acelerar la adaptacion del equipo."
           ),
           "impacto": "Medio",
           "solucion_a": (
-              "Estructura una solución específica para los retos con tu equipo y"
+              "Estructura una solucion especifica para los retos con tu equipo y"
               " personal descritos."
           ),
       })
@@ -480,13 +480,13 @@ if st.session_state.get("enviado", False):
       roadmap.append({
           "categoria": "Acompañamiento a Medida",
           "titulo": (
-              "Célula de Consultoría Táctica para Resolución de Desafíos"
+              "Celula de Consultoria Tactica para Resolucion de Desafios"
           ),
           "desc": (
-              "Análisis focalizado de tu caso particular para diseñar una"
+              "Analisis focalizado de tu caso particular para diseñar una"
               " solución modular ad-hoc de rápida implementación."
           ),
-          "impacto": "Estratégico",
+          "impacto": "Estrategico",
           "solucion_a": (
               "Crea un plan táctico exclusivo para abordar tu situación"
               f' singular: "{d["problema_especifico"]}".'
@@ -496,7 +496,7 @@ if st.session_state.get("enviado", False):
 
   def obtener_peso_impacto(impacto_texto):
     texto = impacto_texto.lower()
-    if "crítico" in texto:
+    if "critico" in texto or "crítico" in texto:
       return 1
     elif "alto" in texto:
       return 2
@@ -535,21 +535,21 @@ if st.session_state.get("enviado", False):
       st.markdown("---")
 
 
-  # --- FUNCIÓN PARA GENERAR EL PDF CORREGIDA (fpdf2) ---
+  # --- FUNCIÓN PARA GENERAR EL PDF CORREGIDA Y LIMPIA ---
   def crear_pdf(d, roadmap_items):
     pdf = FPDF()
     pdf.add_page()
     pdf.set_auto_page_break(auto=True, margin=15)
     
     # Título Principal
-    pdf.set_font("helvetica", "B", 16)
-    pdf.cell(190, 10, "GestiónPyme IA - Informe de Diagnostico 360", 0, 1, "C")
+    pdf.set_font("helvetica", "B", 15)
+    pdf.cell(190, 10, "Gestion Pyme IA - Informe de Diagnostico 360", 0, 1, "C")
     
     # Datos de la Empresa
     pdf.set_font("helvetica", "", 10)
     pdf.cell(190, 6, f"Empresa: {d['empresa']} | Sector: {d['sector']} | Empleados: {d['empleados']}", 0, 1, "C")
     pdf.cell(190, 6, f"Contacto: {d['contacto']} ({d['email']} / {d['telefono']})", 0, 1, "C")
-    pdf.ln(8)
+    pdf.ln(6)
 
     # Cabecera del Plan
     pdf.set_font("helvetica", "B", 12)
@@ -563,7 +563,7 @@ if st.session_state.get("enviado", False):
       pdf.set_font("helvetica", "", 9)
       pdf.multi_cell(190, 5, f"Descripcion: {item['desc']}")
       pdf.multi_cell(190, 5, f"Como resuelve tu problema: {item['solucion_a']}")
-      pdf.ln(4)
+      pdf.ln(3)
 
     return bytes(pdf.output())
 
@@ -578,7 +578,7 @@ if st.session_state.get("enviado", False):
       mime="application/pdf",
   )
 
-  # --- SECCIÓN DE ENVÍO DE CORREO AUTOMÁTICO ---
+  # --- SECCIÓN DE ENVÍO DE CORREO AUTOMÁTICO ENRIQUECIDO ---
   st.markdown("---")
   st.markdown("#### ¿Deseas que un asesor experto se ponga en contacto contigo?")
   st.write(
@@ -593,24 +593,41 @@ if st.session_state.get("enviado", False):
       password = "cdbv wkyt avzf siur"
       destinatario = "gestionpymeiaupv@gmail.com"
 
+      # Construir texto detallado con el plan de acción para el correo
+      detalle_roadmap = ""
+      for idx, item in enumerate(roadmap, 1):
+        detalle_roadmap += f"\n- [{item['fase_secuencial']}] {item['titulo']} (Impacto: {item['impacto']})\n  Descripcion: {item['desc']}\n  Solucion: {item['solucion_a']}\n"
+
       msg = MIMEMultipart()
       msg["From"] = remitente
       msg["To"] = destinatario
-      msg["Subject"] = (
-          f"Nuevo Lead B2B: {d['empresa']} ({d['sector']})"
-      )
+      msg["Subject"] = f"Nuevo Lead B2B: {d['empresa']} ({d['sector']})"
 
       cuerpo = f"""
-            Nuevo cliente potencial interesado en consultoría:
-            - Empresa: {d['empresa']}
-            - Sector: {d['sector']}
-            - Empleados: {d['empleados']}
-            - Responsable: {d['contacto']}
-            - Email: {d['email']}
-            - Teléfono: {d['telefono']}
-            - Canal preferido: {d['canal']}
-            - Desafío específico: {d['problema_especifico']}
-            """
+NUEVO CLIENTE POTENCIAL - GESTIONPYME IA
+
+1. DATOS DE CONTACTO:
+- Empresa: {d['empresa']}
+- Sector: {d['sector']}
+- Empleados: {d['empleados']}
+- Responsable: {d['contacto']}
+- Email: {d['email']}
+- Teléfono: {d['telefono']}
+- Canal preferido: {d['canal']}
+- Presupuesto estimado: {d['presupuesto']}
+
+2. RESPUESTAS DEL BRIEFING:
+- Finanzas: {d['finanzas']}
+- Operaciones: {d['operaciones']}
+- Marketing: {d['marketing']}
+- RRHH y Comunicación: {d['rrhh']}
+- Horas administrativas: {d['horas_admin']}
+- Interés en IA: {", ".join(d['interes_ia']) if d['interes_ia'] else "Ninguno seleccionado"}
+- Desafío específico reportado: {d['problema_especifico']}
+
+3. PLAN DE ACCION SUGERIDO:
+{detalle_roadmap}
+      """
       msg.attach(MIMEText(cuerpo, "plain"))
 
       # Envío real mediante SMTP de Gmail
