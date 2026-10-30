@@ -535,7 +535,7 @@ if st.session_state.get("enviado", False):
       st.markdown("---")
 
 
-  # --- FUNCIÓN PARA GENERAR EL PDF PERFECTAMENTE ALINEADO Y SIN CORTES ---
+  # --- FUNCIÓN PARA GENERAR EL PDF PERFECTAMENTE ALINEADO A LA IZQUIERDA ---
   def crear_pdf(d, roadmap_items):
     pdf = FPDF()
     pdf.add_page()
@@ -557,17 +557,17 @@ if st.session_state.get("enviado", False):
     pdf.ln(2)
 
     for item in roadmap_items:
-      # Título de la fase
+      # 1. Título de la fase
       pdf.set_font("helvetica", "B", 10)
       pdf.multi_cell(180, 6, f"[{item['fase_secuencial']}] {item['titulo']} (Impacto: {item['impacto']})")
       
-      # Descripción separada limpiamente
+      # 2. Descripción alineada estrictamente a la izquierda sin saltos raros
       pdf.set_font("helvetica", "B", 9)
       pdf.cell(180, 5, "Descripcion:", 0, 1, "L")
       pdf.set_font("helvetica", "", 9)
       pdf.multi_cell(180, 5, item['desc'])
       
-      # Cómo resuelve el problema separado limpiamente
+      # 3. Como resuelve alineado estrictamente a la izquierda
       pdf.set_font("helvetica", "B", 9)
       pdf.cell(180, 5, "Como resuelve tu problema:", 0, 1, "L")
       pdf.set_font("helvetica", "", 9)
