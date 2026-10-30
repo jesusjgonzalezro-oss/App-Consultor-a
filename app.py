@@ -535,7 +535,7 @@ if st.session_state.get("enviado", False):
       st.markdown("---")
 
 
-  # --- FUNCIÓN PARA GENERAR EL PDF CORREGIDA CON MULTI_CELL EN TODO ---
+  # --- FUNCIÓN PARA GENERAR EL PDF CON MULTI_CELL EN TODO (SEGURO Y SIN CORTES) ---
   def crear_pdf(d, roadmap_items):
     pdf = FPDF()
     pdf.add_page()
@@ -561,13 +561,13 @@ if st.session_state.get("enviado", False):
       pdf.set_font("helvetica", "B", 10)
       pdf.multi_cell(180, 6, f"[{item['fase_secuencial']}] {item['titulo']} (Impacto: {item['impacto']})")
       
-      # 2. Descripción usando multi_cell exclusivo (sin cortes)
+      # 2. Descripción usando multi_cell para la etiqueta y para el texto
       pdf.set_font("helvetica", "B", 9)
       pdf.multi_cell(180, 5, "Descripcion:")
       pdf.set_font("helvetica", "", 9)
       pdf.multi_cell(180, 5, item['desc'])
       
-      # 3. Como resuelve usando multi_cell exclusivo (sin cortes)
+      # 3. Cómo resuelve usando multi_cell para la etiqueta y para el texto
       pdf.set_font("helvetica", "B", 9)
       pdf.multi_cell(180, 5, "Como resuelve tu problema:")
       pdf.set_font("helvetica", "", 9)
