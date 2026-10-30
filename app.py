@@ -535,35 +535,36 @@ if st.session_state.get("enviado", False):
       st.markdown("---")
 
 
-  # --- FUNCIÓN PARA GENERAR EL PDF CORREGIDA Y LIMPIA ---
+  # --- FUNCIÓN PARA GENERAR EL PDF CORREGIDA (ANCHO 180mm) ---
   def crear_pdf(d, roadmap_items):
     pdf = FPDF()
     pdf.add_page()
     pdf.set_auto_page_break(auto=True, margin=15)
     
-    # Título Principal
+    # Título Principal (ancho 180 para dejar margen simétrico)
     pdf.set_font("helvetica", "B", 15)
-    pdf.cell(190, 10, "Gestion Pyme IA - Informe de Diagnostico 360", 0, 1, "C")
+    pdf.cell(180, 10, "Gestion Pyme IA - Informe de Diagnostico 360", 0, 1, "C")
     
     # Datos de la Empresa
     pdf.set_font("helvetica", "", 10)
-    pdf.cell(190, 6, f"Empresa: {d['empresa']} | Sector: {d['sector']} | Empleados: {d['empleados']}", 0, 1, "C")
-    pdf.cell(190, 6, f"Contacto: {d['contacto']} ({d['email']} / {d['telefono']})", 0, 1, "C")
+    pdf.cell(180, 6, f"Empresa: {d['empresa']} | Sector: {d['sector']} | Empleados: {d['empleados']}", 0, 1, "C")
+    pdf.cell(180, 6, f"Contacto: {d['contacto']} ({d['email']} / {d['telefono']})", 0, 1, "C")
     pdf.ln(6)
 
     # Cabecera del Plan
     pdf.set_font("helvetica", "B", 12)
-    pdf.cell(190, 8, "Plan de Accion y Soluciones Recomendadas", 0, 1, "L")
+    pdf.cell(180, 8, "Plan de Accion y Soluciones Recomendadas", 0, 1, "L")
     pdf.ln(2)
 
     for item in roadmap_items:
       pdf.set_font("helvetica", "B", 10)
-      pdf.multi_cell(190, 6, f"[{item['fase_secuencial']}] {item['titulo']} (Impacto: {item['impacto']})")
+      # Ancho 180 mm en lugar de 190 para evitar cortes a la derecha
+      pdf.multi_cell(180, 6, f"[{item['fase_secuencial']}] {item['titulo']} (Impacto: {item['impacto']})")
       
       pdf.set_font("helvetica", "", 9)
-      pdf.multi_cell(190, 5, f"Descripcion: {item['desc']}")
-      pdf.multi_cell(190, 5, f"Como resuelve tu problema: {item['solucion_a']}")
-      pdf.ln(3)
+      pdf.multi_cell(180, 5, f"Descripcion: {item['desc']}")
+      pdf.multi_cell(180, 5, f"Como resuelve tu problema: {item['solucion_a']}")
+      pdf.ln(4)
 
     return bytes(pdf.output())
 
